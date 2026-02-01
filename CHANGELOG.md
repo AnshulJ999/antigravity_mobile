@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `docs/BRANCHING.md`, `docs/RELEASING.md`, `docs/CORE_CONTRACT.md`.
 - Added GitHub templates (PR, Issue).
 - Added CI workflow (`.github/workflows/ci.yml`).
-- Added `scripts/precommit.sh` and related `package.json` script.
+- Added `scripts/precommit.mjs` and related `package.json` script.
+- Reconnect/Replay support for WebSocket clients.
 
 ### Changed
 - Hardened repository structure to align with AG standards.
