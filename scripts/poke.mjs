@@ -71,8 +71,20 @@ async function main() {
     for (const port of PORTS) {
         try {
             const list = await getJson(`http://127.0.0.1:${port}/json/list`);
+            
+            // Priority 1: Launchpad/Jetski (Antigravity Chat UI)
+            let found = list.find(t => 
+                t.url.includes('workbench-jetski-agent.html') || 
+                (t.title && (t.title.includes('Launchpad') || t.title.includes('Jetski')))
+            );
+            
             // Priority 2: Standard Workbench (Fallback)
-            let found = list.find(t => t.url.includes('workbench.html') || (t.title && t.title.includes('workbench')));
+            if (!found) {
+                found = list.find(t => 
+                    t.url.includes('workbench.html') || 
+                    (t.title && t.title.includes('workbench'))
+                );
+            }
 
             if (found && found.webSocketDebuggerUrl) {
                 target = found;

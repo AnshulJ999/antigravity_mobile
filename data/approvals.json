@@ -1,0 +1,18 @@
+[
+  {
+    "id": "appr_c087471d",
+    "createdAt": "2026-02-16T17:16:27.715Z",
+    "kind": "command",
+    "details": {
+      "cmd": "pnpm test",
+      "cwd": ".",
+      "risk": "yellow"
+    },
+    "status": "approved",
+    "decidedAt": "2026-02-16T17:16:38.045Z",
+    "meta": {
+      "risk": "yellow",
+      "clientTag": "dashboard_manual"
+    }
+  }
+]
