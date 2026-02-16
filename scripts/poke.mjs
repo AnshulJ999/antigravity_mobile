@@ -2,7 +2,7 @@ import WebSocket from 'ws';
 import http from 'http';
 
 // Configuration
-const PORTS = [9000, 9001, 9002, 9003];
+const PORTS = [7000, 9000, 9001, 9002, 9003];
 
 // Helper: HTTP GET JSON
 function getJson(url) {
